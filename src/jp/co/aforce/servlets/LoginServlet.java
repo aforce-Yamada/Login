@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import jp.co.aforce.beans.LoginBean;
 import jp.co.aforce.models.LoginModel;
+import jp.co.aforce.models.UserModel;
 
 
 
@@ -52,8 +53,13 @@ public class LoginServlet extends HttpServlet {
     		// TODO ここはオリジナル処理を考える(余裕があったら) ↓↓
             // 例）ログインしたユーザの情報を表示する
             // DB上にある全てのユーザ情報を取得
-            // UserModel userModel = new UserModel();
+    		UserModel userModel = new UserModel();
             // List<UserBean> users = userModel.getAllUsers();
+    		userModel.getAllUsers(username);
+
+            System.out.println("ユーザー名：" + username + "パスワード：" + password);
+            // List<UserBean> users = userModel.getAllUsers();
+    		/* List<UserBean> password 必要？*/
             // TODO ここはオリジナル処理を考える(余裕があったら) ↑↑
 
     		// リクエストオブジェクトに設定

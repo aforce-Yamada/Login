@@ -1,17 +1,32 @@
 package jp.co.aforce.beans;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 public class UserBean implements Serializable {
 	//static final long serialVersionUIDが必要
 	private static final long serialVersionUID = 1L;
 
-	public static void main(String[] args) {
+	// フィールド
+	// private List<UserBean> users = new ArrayList<UserBean>();
 
-	List<String>users = new ArrayList<String>();
-	users.add("山田");
-	users.add("加藤");
+	private String username;
+
+	// 引数なしのデフォルトコンストラクタ
+    public UserBean() {
     }
+
+    // allusersフィールドのsetter,gette
+    // 返り値の型 メソッド名(引数の型 引数名) {メソッドの処理}
+    public String getAllUsers() {
+    	return username;
+    }
+
+    public void setAllUsers(String username) {
+    	this.username = username;
+    }
+
+
+
+
+
 }

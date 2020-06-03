@@ -1,3 +1,4 @@
+// Model アプリケーションの主たる処理やデータの格納などを行う
 package jp.co.aforce.models;
 
 import java.sql.ResultSet;
@@ -28,7 +29,7 @@ public class LoginModel {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("例外が発生しました");
+			System.out.println("loginCheckで例外が発生しました");
 		} finally {
 			DBUtil.closeConnection();
 		}
